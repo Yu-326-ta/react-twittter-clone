@@ -12,7 +12,14 @@ export const Timeline = () => {
 
       <TweetBox />
 
-      <Post />
+      <Post
+        displayName="Yuta"
+        username="Yuta_Engineer"
+        verified={true}
+        text="React勉強中"
+        avatar="http://shincode.info/wp-content/uploads/2021/12/icon.png"
+        image="https://source.unsplash.com/random"
+      />
     </div>
   );
 };
