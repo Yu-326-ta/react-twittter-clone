@@ -1,4 +1,5 @@
 import React from "react";
+import Post from "./Post";
 import "./Timeline.css";
 import TweetBox from "./TweetBox";
 
@@ -10,6 +11,8 @@ export const Timeline = () => {
       </div>
 
       <TweetBox />
+
+      <Post />
     </div>
   );
 };
