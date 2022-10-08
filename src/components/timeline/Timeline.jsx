@@ -3,15 +3,7 @@ import Post from "./Post";
 import "./Timeline.css";
 import TweetBox from "./TweetBox";
 import db from "../../firebase";
-import {
-  collection,
-  doc,
-  getDocs,
-  onSnapshot,
-  orderBy,
-  query,
-  QuerySnapshot,
-} from "firebase/firestore";
+import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 
 export const Timeline = () => {
   const [posts, setPosts] = useState([]);
@@ -33,7 +25,6 @@ export const Timeline = () => {
       </div>
 
       <TweetBox />
-
       {posts.map((post) => (
         <Post
           key={post.text}
