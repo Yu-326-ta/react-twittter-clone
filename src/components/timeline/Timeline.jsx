@@ -7,6 +7,7 @@ import {
   collection,
   doc,
   getDocs,
+  onSnapshot,
   orderBy,
   query,
   QuerySnapshot,
@@ -18,7 +19,10 @@ export const Timeline = () => {
   useEffect(() => {
     const postData = collection(db, "posts");
     const q = query(postData, orderBy("timestamp", "desc"));
-    getDocs(q).then((querySnapShot) => {
+    // getDocs(q).then((querySnapShot) => {
+    //   setPosts(querySnapShot.docs.map((doc) => doc.data()));
+    // });
+    onSnapshot(q, (querySnapShot) => {
       setPosts(querySnapShot.docs.map((doc) => doc.data()));
     });
   }, []);
